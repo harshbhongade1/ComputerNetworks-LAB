@@ -20,15 +20,15 @@ This repository contains **Computer Networks Lab practicals** covering **hardwar
 
 ## 🧪 Practicals Included
 
-### 🔹 Practical 01: [Basic Hardware Components & Network Topologies](EXP01%20-%20Network%20Components%20%26%20Topologies)
-### 🔹 Practical 02: [Socket Programming - TCP Server](EXP02%20-%20TCP%20Echo%20Server)
-### 🔹 Practical 03: [Socket Programming - TCP Client](EXP03%20-%20TCP%20Echo%20Client)
-### 🔹 Practical 04: [Socket Programming - UDP Client](EXP04%20-%20UDP%20Echo%20Client)
-### 🔹 Practical 05: [Socket Programming - UDP Server](EXP05%20-%20UDP%20Echo%20Server)
-### 🔹 Practical 06: [Application Layer DNS Commands & Traceroute](EXP06%20-%20DNS%20Commands%20%26%20Traceroute)
-### 🔹 Practical 07: [Application Layer Protocol Analysis using Wireshark](EXP07%20-%20Wireshark%20Protocol%20Analysis)
-### 🔹 Practical 08: [Sliding Window Protocol (Go-Back-N)](EXP08%20-%20Sliding%20Window%20Protocol%20(Go-Back-N))
-### 🔹 Practical 09: [Traffic Shaping (Leaky Bucket & Token Bucket)](EXP09%20-%20Traffic%20Shaping%20(Leaky%20%26%20Token%20Bucket))
-### 🔹 Practical 10: [Distance Vector Routing Algorithm](EXP10%20-%20Distance%20Vector%20Routing%20Algorithm)
+### 🔹 [Practical 1](Practical%201)
+### 🔹 [Practical 2](Practical%202)
+### 🔹 [Practical 3](Practical%203)
+### 🔹 [Practical 4](Practical%204)
+### 🔹 [Practical 5](Practical%205)
+### 🔹 [Practical 6](Practical%206)
+### 🔹 [Practical 7](Practical%207)
+### 🔹 [Practical 8](Practical%208)
+### 🔹 [Practical 9](Practical%209)
+### 🔹 [Practical 10](Practical%2010)
 
 ---

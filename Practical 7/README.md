@@ -1,4 +1,4 @@
-# Experiment 07: Analysis of Application Layer Protocols using Wireshark
+# Practical 7: Analysis of Application Layer Protocols using Wireshark
 
 **Name:** Kaustubh  
 **PRN:** 24070521098  

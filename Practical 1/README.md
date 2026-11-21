@@ -1,4 +1,4 @@
-# Experiment 01: Study of Basic Hardware Components and Networking
+# Practical 1: Study of Basic Hardware Components and Networking
 
 **Name:** Kaustubh  
 **PRN:** 24070521098  
