@@ -1,0 +1,288 @@
+================================================================================
+EXPERIMENT 06: NETWORK DIAGNOSTIC COMMANDS & DNS CONFIGURATION
+Name: Kaustubh
+PRN: 24070521098
+OS: Windows 11 (Command Prompt)
+DNS Server: 10.17.28.42 (SIT-CDC.SIT-CDC.SYMBINGP.SOC)
+================================================================================
+
+LIST OF SUCCESSFULLY EXECUTED COMMANDS & SESSIONS
+--------------------------------------------------------------------------------
+
+1. IP CONFIGURATION (ipconfig)
+--------------------------------------------------------------------------------
+Command:
+C:\Users\sit.lab2>ipconfig
+
+Output:
+Windows IP Configuration
+
+Ethernet adapter Ethernet:
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::dcba:5ef8:2b43:5cc7%11
+   IPv4 Address. . . . . . . . . . . : 10.17.62.96
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 10.17.62.1
+
+Wireless LAN adapter Local Area Connection* 1:
+   Media State . . . . . . . . . . . : Media disconnected
+
+Wireless LAN adapter Local Area Connection* 10:
+   Media State . . . . . . . . . . . : Media disconnected
+
+Wireless LAN adapter Wi-Fi:
+   Media State . . . . . . . . . . . : Media disconnected
+
+
+2. NETWORK CONNECTIVITY & LATENCY TESTING (ping)
+--------------------------------------------------------------------------------
+Command:
+C:\Users\sit.lab2>ping google.com
+
+Output:
+Pinging google.com [142.250.143.138] with 32 bytes of data:
+Reply from 142.250.143.138: bytes=32 time=14ms TTL=111
+Reply from 142.250.143.138: bytes=32 time=14ms TTL=111
+Reply from 142.250.143.138: bytes=32 time=15ms TTL=114
+Reply from 142.250.143.138: bytes=32 time=15ms TTL=111
+
+Ping statistics for 142.250.143.138:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 14ms, Maximum = 15ms, Average = 14ms
+
+Command:
+C:\Users\sit.lab2>ping chatgpt.com
+
+Output:
+Pinging chatgpt.com [127.0.0.1] with 32 bytes of data:
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+
+Ping statistics for 127.0.0.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+
+3. FORWARD DNS LOOKUP (nslookup)
+--------------------------------------------------------------------------------
+Command:
+C:\Users\sit.lab2>nslookup
+
+> google.com
+Server:  SIT-CDC.SIT-CDC.SYMBINGP.SOC
+Address:  10.17.28.42
+
+Non-authoritative answer:
+Name:    google.com
+Addresses:  2404:6800:4000:100c::65
+          2404:6800:4000:100c::71
+          2404:6800:4000:100c::8b
+          2404:6800:4000:100c::64
+          142.250.143.102
+          142.250.143.138
+          142.250.143.113
+          142.250.143.101
+          142.250.143.100
+          142.250.143.139
+
+> instagram.com
+Server:  SIT-CDC.SIT-CDC.SYMBINGP.SOC
+Address:  10.17.28.42
+
+Non-authoritative answer:
+Name:    instagram.com
+Addresses:  2a03:2880:f312:22:face:b00c:0:4420
+          57.144.42.34
+
+> chatgpt.com
+Server:  SIT-CDC.SIT-CDC.SYMBINGP.SOC
+Address:  10.17.28.42
+
+Non-authoritative answer:
+Name:    chatgpt.com
+Addresses:  2606:4700:4408::ac40:9bd1
+          2a06:98c1:3101::6812:202f
+          172.64.155.209
+          104.18.32.47
+
+> discord.com
+Server:  SIT-CDC.SIT-CDC.SYMBINGP.SOC
+Address:  10.17.28.42
+
+Non-authoritative answer:
+Name:    discord.com
+Addresses:  162.159.138.232
+          162.159.128.233
+          162.159.136.232
+          162.159.137.232
+          162.159.135.232
+
+
+4. NAME SERVER (NS) RECORDS (set q=ns)
+--------------------------------------------------------------------------------
+Command:
+> set q=ns
+> google.com
+
+Output:
+Server:  SIT-CDC.SIT-CDC.SYMBINGP.SOC
+Address:  10.17.28.42
+
+Non-authoritative answer:
+google.com      nameserver = ns2.google.com
+google.com      nameserver = ns1.google.com
+google.com      nameserver = ns3.google.com
+google.com      nameserver = ns4.google.com
+
+ns2.google.com  internet address = 216.239.34.10
+ns2.google.com  AAAA IPv6 address = 2001:4860:4802:34::a
+ns1.google.com  internet address = 216.239.32.10
+ns1.google.com  AAAA IPv6 address = 2001:4860:4802:32::a
+ns3.google.com  internet address = 216.239.36.10
+ns3.google.com  AAAA IPv6 address = 2001:4860:4802:36::a
+ns4.google.com  internet address = 216.239.38.10
+ns4.google.com  AAAA IPv6 address = 2001:4860:4802:38::a
+
+
+5. CANONICAL NAME (CNAME) & ALIAS RESOLUTION
+--------------------------------------------------------------------------------
+Commands:
+> set q=ns
+> www.instagram.com
+Non-authoritative answer:
+www.instagram.com       canonical name = z-p42-instagram.c10r.instagram.com
+
+> www.geeksforgeeks.org
+Non-authoritative answer:
+www.geeksforgeeks.org   canonical name = d1t2f3swasxi04.cloudfront.net
+d1t2f3swasxi04.cloudfront.net   nameserver = ns-1056.awsdns-04.org
+d1t2f3swasxi04.cloudfront.net   nameserver = ns-1568.awsdns-04.co.uk
+d1t2f3swasxi04.cloudfront.net   nameserver = ns-27.awsdns-03.com
+d1t2f3swasxi04.cloudfront.net   nameserver = ns-532.awsdns-02.net
+
+ns-1568.awsdns-04.co.uk internet address = 205.251.198.32
+ns-27.awsdns-03.com     internet address = 205.251.192.27
+
+> www.amazon.in
+Non-authoritative answer:
+www.amazon.in   canonical name = tp.c95e7e602-frontier.amazon.in
+tp.c95e7e602-frontier.amazon.in canonical name = cf.c95e7e602-frontier.amazon.in
+
+c95e7e602-frontier.amazon.in
+        primary name server = ns-1937.awsdns-50.co.uk
+        responsible mail addr = awsdns-hostmaster.amazon.com
+        serial  = 1
+        refresh = 7200 (2 hours)
+        retry   = 900 (15 mins)
+        expire  = 1209600 (14 days)
+        default TTL = 86400 (1 day)
+
+> www.amazon.com
+Non-authoritative answer:
+www.amazon.com  canonical name = tp.47cf2c8c9-frontier.amazon.com
+tp.47cf2c8c9-frontier.amazon.com        canonical name = www.amazon.com.edgekey.net
+www.amazon.com.edgekey.net      canonical name = e15316.dsca.akamaiedge.net
+
+dsca.akamaiedge.net
+        primary name server = n0dsca.akamaiedge.net
+        responsible mail addr = hostmaster.akamai.com
+
+
+6. START OF AUTHORITY (SOA) RECORD (set q=soa)
+--------------------------------------------------------------------------------
+Command:
+> set q=soa
+> www.google.com
+
+Output:
+Server:  SIT-CDC.SIT-CDC.SYMBINGP.SOC
+Address:  10.17.28.42
+
+google.com
+        primary name server = ns1.google.com
+        responsible mail addr = dns-admin.google.com
+        serial  = 985880970
+        refresh = 900 (15 mins)
+        retry   = 900 (15 mins)
+        expire  = 1800 (30 mins)
+        default TTL = 60 (1 min)
+ns1.google.com  internet address = 216.239.32.10
+ns1.google.com  AAAA IPv6 address = 2001:4860:4802:32::a
+
+
+7. DETAILED DNS QUERY INSPECTION (set debug)
+--------------------------------------------------------------------------------
+Command:
+> set debug
+> www.google.com
+
+Output:
+Server:  SIT-CDC.SIT-CDC.SYMBINGP.SOC
+Address:  10.17.28.42
+
+------------
+Got answer:
+    HEADER:
+        opcode = QUERY, id = 6, rcode = NOERROR
+        header flags:  response, want recursion, recursion avail.
+        questions = 1,  answers = 8,  authority records = 0,  additional = 0
+
+    QUESTIONS:
+        www.google.com, type = A, class = IN
+    ANSWERS:
+    ->  www.google.com
+        internet address = 142.251.150.119
+        ttl = 140 (2 mins 20 secs)
+    ->  www.google.com
+        internet address = 142.251.155.119
+        ttl = 140 (2 mins 20 secs)
+...
+Non-authoritative answer:
+Name:    www.google.com
+Addresses:  2001:4860:482b:7700::
+          142.251.150.119
+          142.251.155.119
+          142.251.154.119
+
+
+8. MAIL EXCHANGER (MX) RECORDS (set q=mx)
+--------------------------------------------------------------------------------
+Command:
+> set q=mx
+> gmail.com
+
+Output:
+Server:  SIT-CDC.SIT-CDC.SYMBINGP.SOC
+Address:  10.17.28.42
+
+Non-authoritative answer:
+gmail.com       MX preference = 30, mail exchanger = alt3.gmail-smtp-in.l.google.com
+gmail.com       MX preference = 5, mail exchanger = gmail-smtp-in.l.google.com
+gmail.com       MX preference = 40, mail exchanger = alt4.gmail-smtp-in.l.google.com
+gmail.com       MX preference = 10, mail exchanger = alt1.gmail-smtp-in.l.google.com
+gmail.com       MX preference = 20, mail exchanger = alt2.gmail-smtp-in.l.google.com
+
+gmail-smtp-in.l.google.com      internet address = 192.178.211.27
+
+
+9. REVERSE DNS LOOKUP (nslookup <IP>)
+--------------------------------------------------------------------------------
+Command:
+C:\Users\sit.lab2>nslookup 10.17.28.42
+Name:    SIT-CDC.SIT-CDC.SYMBINGP.SOC
+Address:  10.17.28.42
+
+Command:
+C:\Users\sit.lab2>nslookup 142.250.143.102
+Name:    pt-in-f102.1e100.net
+Address:  142.250.143.102
+
+Command:
+C:\Users\sit.lab2>nslookup 57.144.42.34
+Name:    instagram-p42-shv-02-bom5.fbcdn.net
+Address:  57.144.42.34
+================================================================================

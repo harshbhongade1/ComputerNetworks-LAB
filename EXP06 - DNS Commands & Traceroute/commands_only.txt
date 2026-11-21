@@ -1,0 +1,70 @@
+:: ==============================================================================
+:: EXPERIMENT 06: NETWORK DIAGNOSTIC COMMANDS (COPY-PASTE BLOCKS)
+:: Name: Kaustubh | PRN: 24070521098
+:: ==============================================================================
+
+:: BLOCK 1: Forward DNS Lookup (resolves domain names to IP addresses)
+nslookup
+google.com
+instagram.com
+exit
+
+
+:: BLOCK 2: Network Connectivity & Latency Testing (Ping)
+ping google.com
+ping chatgpt.com
+
+
+:: BLOCK 3: Name Server (NS) Query (finds authoritative DNS servers for a domain)
+nslookup
+chatgpt.com
+discord.com
+set q=ns
+google.com
+exit
+
+
+:: BLOCK 4: CNAME Alias & CDN Resolution (resolves canonical names and CDN endpoints)
+nslookup
+set q=ns
+www.instagram.com
+www.geeksforgeeks.org
+www.google.com
+www.amazon.in
+www.amazon.com
+exit
+
+
+:: BLOCK 5: Start of Authority (SOA) Query (views zone admin, serial, and refresh timers)
+nslookup
+set q=soa
+www.google.com
+exit
+
+
+:: BLOCK 6: DNS Debug Mode (inspects raw packet headers, query IDs, flags, and answers)
+nslookup
+set debug
+www.google.com
+exit
+
+
+:: BLOCK 7: Network Adapter IP Configuration (views local IPv4, subnet mask, gateway)
+ipconfig
+
+
+:: BLOCK 8: Mail Exchanger (MX) Query (finds mail servers and priority rankings)
+nslookup
+set q=mx
+gmail.com
+exit
+
+
+:: BLOCK 9: Reverse DNS Lookup (resolves IP addresses back to domain names/hostnames)
+nslookup 10.17.28.42
+nslookup 142.250.143.102
+nslookup 57.144.42.34
+
+
+:: BLOCK 10: Traceroute Tool (traces packet route and hop-by-hop latency to destination)
+tracert google.com
