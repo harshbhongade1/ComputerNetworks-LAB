@@ -1,7 +1,7 @@
 ================================================================================
 EXPERIMENT 06: NETWORK DIAGNOSTIC COMMANDS & DNS CONFIGURATION
-Name: Kaustubh
-PRN: 24070521098
+Name: Harsh Bhongade
+PRN: 24070521080
 OS: Windows 11 (Command Prompt)
 DNS Server: 10.17.28.42 (SIT-CDC.SIT-CDC.SYMBINGP.SOC)
 ================================================================================

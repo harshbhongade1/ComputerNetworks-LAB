@@ -1,7 +1,7 @@
 # Practical 1: Study of Basic Hardware Components and Networking
 
-**Name:** Kaustubh  
-**PRN:** 24070521098  
+**Name:** Harsh Bhongade  
+**PRN:** 24070521080  
 
 ---
 

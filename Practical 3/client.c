@@ -1,6 +1,6 @@
 /*
- * Name: Kaustubh
- * PRN: 24070521098
+ * Name: Harsh Bhongade
+ * PRN: 24070521080
  * Experiment 03: Socket Programming - TCP Client for Transport Layer
  */
 
@@ -12,7 +12,7 @@
 #include <netinet/in.h>
 
 #define PORT 8080
-#define BUF_SIZE 1098
+#define BUF_SIZE 1080
 
 int main() {
     int sock;

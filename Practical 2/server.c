@@ -1,5 +1,5 @@
 /*
- * Name: Harsh
+ * Name: Harsh Bhongade
  * PRN: 24070521080
  * Experiment 02: Socket Programming - TCP Server for Transport Layer
  */
@@ -12,7 +12,7 @@
 #include <netinet/in.h>
 
 #define PORT 8080
-#define BUF_SIZE 1098
+#define BUF_SIZE 1080
 
 int main() {
     int server_fd, client_fd;

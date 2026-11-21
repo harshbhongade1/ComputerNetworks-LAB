@@ -1,6 +1,6 @@
 :: ==============================================================================
 :: EXPERIMENT 06: NETWORK DIAGNOSTIC COMMANDS (COPY-PASTE BLOCKS)
-:: Name: Kaustubh | PRN: 24070521098
+:: Name: Harsh Bhongade | PRN: 24070521080
 :: ==============================================================================
 
 :: BLOCK 1: Forward DNS Lookup (resolves domain names to IP addresses)
